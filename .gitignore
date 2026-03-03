@@ -1,0 +1,32 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment
+.env
+
+# Old data source
+saiku-export (9).csv
+
+# DuckDB database (rebuilt from CSV on startup)
+retail_data.db
+
+# ChromaDB persistent storage
+chroma_db/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Antigravity Kit (dev tooling)
+antigravity-kit/
+.agent/
+
+# Streamlit (legacy)
+.streamlit/

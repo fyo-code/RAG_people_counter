@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobexpert AI — Asistent Insights Retail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <a href="/" class="logo">
+            <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="8" fill="#FF6B00"/>
+                <path d="M8 16L14 10L20 16L14 22L8 16Z" fill="white"/>
+                <path d="M14 16L20 10L26 16L20 22L14 16Z" fill="rgba(255,255,255,0.6)"/>
+            </svg>
+            <span class="logo-text">Mobexpert AI</span>
+        </a>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+        <!-- HERO SECTION (visible before first message) -->
+        <section class="hero" id="hero">
+            <h1 class="hero-title">
+                Insights din datele tale<br>
+                <span class="hero-accent">în timp real</span>
+            </h1>
+            <p class="hero-subtitle">
+                Întreabă orice despre trafic, venituri sau performanța magazinelor. Datele vorbesc — tu doar întrebi.
+            </p>
+        </section>
+
+        <!-- CHAT MESSAGES AREA -->
+        <div class="chat-messages" id="chatMessages"></div>
+    </main>
+
+    <!-- BOTTOM INPUT AREA -->
+    <footer class="input-area">
+        <!-- SUGGESTION CHIPS (visible before first message) -->
+        <div class="suggestions" id="suggestions">
+            <button class="chip" data-question="Care a fost traficul total în toate magazinele?">
+                <svg class="chip-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"/></svg>
+                Traficul total în toate magazinele
+            </button>
+            <button class="chip" data-question="Care este ora cu cel mai mare trafic din toate magazinele?">
+                <svg class="chip-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
+                Ora de vârf pentru trafic
+            </button>
+            <button class="chip" data-question="Care a fost rata de conversie totală în Baneasa?">
+                <svg class="chip-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h4l3 3 3-3h4a2 2 0 002-2V5a1 1 0 100-2H3zm4 6a1 1 0 011-1h4a1 1 0 110 2H8a1 1 0 01-1-1z" clip-rule="evenodd"/></svg>
+                Rata de conversie în Baneasa
+            </button>
+            <button class="chip" data-question="De ce au fost veniturile scăzute în februarie?">
+                <svg class="chip-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+                De ce veniturile scăzute în februarie?
+            </button>
+        </div>
+
+        <form class="input-form" id="chatForm">
+            <div class="input-wrapper">
+                <input
+                    type="text"
+                    id="chatInput"
+                    class="chat-input"
+                    placeholder="Întreabă despre datele de retail..."
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit" class="send-btn" id="sendBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </footer>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
